@@ -1,0 +1,10 @@
+#!/system/bin/sh
+
+#thanks idler1984 for trick
+/data/local/tmp/busybox killall -STOP system_server
+
+chmod 777 /data/getrootlog
+/data/local/tmp/getroot > /data/local/tmp/giefrootlog
+touch /data/local/tmp/getroot_run
+chmod 777 /data/local/tmp/getroot_run
+reboot

